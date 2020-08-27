@@ -6,8 +6,20 @@ button.onclick = function () {
     let value = inputIn.value;
     let b = value;
     let a = b.split(", ");
-    console.log(a.map(x => [Math.random(), x]).sort(([a], [b]) => a - b).map(([_, x]) => x));
-    local.innerHTML = a.map(x => [Math.random(), x]).sort(([a], [b]) => a - b).map(([_, x]) => x);
+
+    function shuffle(array) {
+        var rand, index = -1,
+            length = array.length,
+            result = Array(length);
+        while (++index < length) {
+            rand = Math.floor(Math.random() * (index + 1));
+            result[index] = result[rand];
+            result[rand] = array[index];
+        }
+        return result;
+    }
+    local.innerHTML = shuffle(a)
+    console.log(shuffle(a));
 }
 
 
