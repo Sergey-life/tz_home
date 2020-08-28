@@ -4,8 +4,8 @@ let local = document.querySelector('.local');
 
 button.onclick = function () {
     let value = inputIn.value;
-    let b = value;
-    let a = b.split(", ");
+    let input = value;
+    let items = input.split(", ");
 
     function permutator(inputArr) {
         var results = [];
@@ -28,7 +28,18 @@ button.onclick = function () {
         return permute(inputArr);
     }
 
-    local.innerHTML = permutator(a)
+    console.log(permutator(items))
+    ul = document.createElement('ul');
+
+    document.getElementById('myItemList').appendChild(ul);
+
+    items.forEach(function (item) {
+        let li = document.createElement('li');
+        ul.appendChild(li);
+
+        li.innerHTML += item;
+    })
+
 }
 
 
