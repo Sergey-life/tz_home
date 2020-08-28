@@ -1,6 +1,5 @@
 let inputIn = document.querySelector('.form-control');
 let button = document.querySelector('button');
-let local = document.querySelector('.local');
 
 button.onclick = function () {
     let value = inputIn.value;
@@ -28,18 +27,16 @@ button.onclick = function () {
         return permute(inputArr);
     }
 
-    console.log(permutator(items))
-    ul = document.createElement('ul');
+    const div = document.getElementById('container')
+    const list = permutator(items)
 
-    document.getElementById('myItemList').appendChild(ul);
+    list.forEach(i => {
+        const el = document.createElement('p')
 
-    items.forEach(function (item) {
-        let li = document.createElement('li');
-        ul.appendChild(li);
+        el.textContent = i.toString()
 
-        li.innerHTML += item;
+        div.appendChild(el)
     })
-
 }
 
 
