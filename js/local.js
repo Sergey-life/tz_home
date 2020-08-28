@@ -41,6 +41,8 @@ button.onclick = function () {
 
             div.appendChild(el)
         })
+
+        return false
     }
 }
 
