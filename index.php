@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/action.js"></script>
     <title>Document</title>
@@ -20,8 +19,8 @@
             <small id="emailHelp" class="form-text text-muted">Введите слова через запятую.</small>
         </div>
         <div class="form-group form-check">
-            <input name="local" type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Обрааботаать в браузере (js)</label>
+            <input type="checkbox" id="box" name="box">
+            <label for="box">Клиент</label>
         </div>
         <button type="submit" class="btn btn-primary">Отправить</button>
     </form>
@@ -32,9 +31,9 @@
     <div class="out">
         <br>
     </div>
-        <div class="content">
-            <div id="container"></div>
-        </div>
+    <div class="content">
+        <div id="container"></div>
+    </div>
 </div>
 <script type="text/javascript" src="js/local.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

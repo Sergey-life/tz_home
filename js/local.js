@@ -1,9 +1,11 @@
 let inputIn = document.querySelector('.form-control');
 let button = document.querySelector('button');
-let local = document.querySelector('.local');
 
-if (local != null) {
-    button.onclick = function () {
+button.onclick = function () {
+    const box = document.querySelector('#box')
+
+    if (box.checked)  {
+
         let value = inputIn.value;
         let input = value;
         let items = input.split(", ");
@@ -38,11 +40,8 @@ if (local != null) {
             el.textContent = i.toString()
 
             div.appendChild(el)
-            console.log(list)
         })
     }
 }
-
-
 
 

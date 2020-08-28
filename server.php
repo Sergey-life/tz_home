@@ -17,5 +17,3 @@ function pc_permute($items, $perms = [])
 }
 
 pc_permute(explode(", ", $result));
-
-
