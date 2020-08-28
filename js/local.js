@@ -7,19 +7,28 @@ button.onclick = function () {
     let b = value;
     let a = b.split(", ");
 
-    function shuffle(array) {
-        var rand, index = -1,
-            length = array.length,
-            result = Array(length);
-        while (++index < length) {
-            rand = Math.floor(Math.random() * (index + 1));
-            result[index] = result[rand];
-            result[rand] = array[index];
+    function permutator(inputArr) {
+        var results = [];
+
+        function permute(arr, memo) {
+            var cur, memo = memo || [];
+
+            for (var i = 0; i < arr.length; i++) {
+                cur = arr.splice(i, 1);
+                if (arr.length === 0) {
+                    results.push(memo.concat(cur));
+                }
+                permute(arr.slice(), memo.concat(cur));
+                arr.splice(i, 0, cur[0]);
+            }
+
+            return results;
         }
-        return result;
+
+        return permute(inputArr);
     }
-    local.innerHTML = shuffle(a)
-    console.log(shuffle(a));
+
+    local.innerHTML = permutator(a)
 }
 
 
